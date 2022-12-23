@@ -17,7 +17,7 @@ function App() {
   const [steps, setSteps] = useState(false);
 
   const handleSteps = () => {
-    setSteps((prev) => !prev);
+    setSteps(true);
   };
 
   let waterRatio = 16.6666666667;
