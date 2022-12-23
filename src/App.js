@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Choice from './components/Choice';
 
 const Greeting = () => {
   var today = new Date();
@@ -40,6 +41,9 @@ function App() {
                 </h3>
                 <div>
                   <div className="flex justify-start mt-2 gap-x-5">
+                    <Choice value="15" name="fifteen" />
+                    <Choice value="18" name="eighteen" />
+                    <Choice value="21" name="twentyOne" />
                     <div className="">
                       <input
                         onChange={() => {
@@ -49,240 +53,200 @@ function App() {
                           handleSteps();
                         }}
                         type="radio"
-                        value="15"
-                        id="fifteen"
+                        value="12"
+                        id="twelve"
                         name="beans"
-                        className="hidden p-10 peer/fifteen"
+                        className="hidden p-10 peer/twelve"
                       />
                       <label
-                        className="flex items-center justify-center bg-white w-12 h-12 rounded-lg shadow-md font-bold text-lg peer-checked/fifteen:text-white peer-checked/fifteen:bg-blue"
-                        htmlFor="fifteen"
+                        className="flex items-center justify-center bg-white w-12 h-12 rounded-lg shadow-md font-bold text-lg peer-checked/twelve:text-white peer-checked/twelve:bg-blue"
+                        htmlFor="twelve"
                       >
-                        15<span className="text-sm font-medium">g</span>
-                      </label>
-                    </div>
-                    <div>
-                      <input
-                        onChange={() => {
-                          setCount(
-                            parseInt(document.getElementById('eighteen').value)
-                          );
-                          handleSteps();
-                        }}
-                        type="radio"
-                        value="18"
-                        id="eighteen"
-                        name="beans"
-                        className="hidden p-10 peer/eighteen"
-                      />
-                      <label
-                        className="flex items-center justify-center bg-white w-12 h-12 rounded-lg shadow-md font-bold text-lg peer-checked/eighteen:text-white peer-checked/eighteen:bg-blue"
-                        htmlFor="eighteen"
-                      >
-                        18<span className="text-sm font-medium">g</span>
-                      </label>
-                    </div>
-                    <div>
-                      <input
-                        onChange={() => {
-                          setCount(
-                            parseInt(document.getElementById('twenty').value)
-                          );
-                          handleSteps();
-                        }}
-                        type="radio"
-                        value="21"
-                        id="twenty"
-                        name="beans"
-                        className="hidden p-10 peer/twenty"
-                      />
-                      <label
-                        className="flex items-center justify-center bg-white w-12 h-12 rounded-lg shadow-md font-bold text-lg peer-checked/twenty:text-white peer-checked/twenty:bg-blue"
-                        htmlFor="twenty"
-                      >
-                        21<span className="text-sm font-medium">g</span>
+                        12<span className="text-sm font-medium">g</span>
                       </label>
                     </div>
                   </div>
-                  <div className={`${steps ? '' : 'hidden'}`}>
-                    <div>
-                      <h3 className="text-base uppercase font-bold text-blue mt-10">
-                        preparation
-                      </h3>
-                      <div className="flex flex-col gap-4 mt-2 items-start align-center">
-                        <div className="flex items-center align-center">
-                          <div className="flex items-center justify-center bg-blue text-white font-medium h-6 w-6 rounded-full">
-                            1
-                          </div>
-                          <p className="ml-3 font-medium text-blue text-lg">
-                            Grind {count}g of coffee
-                          </p>
-                        </div>
-                        <div className="flex items-center align-center">
-                          <div className="flex items-center justify-center bg-blue text-white font-medium h-6 w-6 rounded-full">
-                            2
-                          </div>
-                          <p className="ml-3 font-medium text-blue text-lg">
-                            Boil {Math.round(count * waterRatio)}ml of water
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    {/* PREPARATION */}
-                    <div>
-                      <h3 className="text-base uppercase font-bold text-blue mt-10">
-                        COFFEE RECIPE
-                      </h3>
-                      <div className="flex flex-col mt-2 items-start align-center">
-                        <div className="mt-3">
-                          <p className="ml-9 font-medium text-almoustBlack text-xs">
-                            0m 00s - 0m 10s (10s)
-                          </p>
+                  <div>
+                    <div className={`${steps ? '' : 'hidden'}`}>
+                      <div>
+                        <h3 className="text-base uppercase font-bold text-blue mt-10">
+                          preparation
+                        </h3>
+                        <div className="flex flex-col gap-4 mt-2 items-start align-center">
                           <div className="flex items-center align-center">
                             <div className="flex items-center justify-center bg-blue text-white font-medium h-6 w-6 rounded-full">
                               1
                             </div>
                             <p className="ml-3 font-medium text-blue text-lg">
-                              Pour {Math.round(count * 3.3333333333)}g of water
-                              to bloom
+                              Grind {count}g of coffee
                             </p>
                           </div>
-                        </div>
-                        <div className="mt-3">
-                          <p className="ml-9 font-medium text-almoustBlack text-xs ">
-                            0m 10s - 0m 15s (5s)
-                          </p>
                           <div className="flex items-center align-center">
                             <div className="flex items-center justify-center bg-blue text-white font-medium h-6 w-6 rounded-full">
                               2
                             </div>
-
                             <p className="ml-3 font-medium text-blue text-lg">
-                              Gently Swirl
-                            </p>
-                          </div>
-                        </div>
-                        <div className="mt-3">
-                          <p className="ml-9 font-medium text-almoustBlack text-xs ">
-                            0m 15s - 0m 45s (30s)
-                          </p>
-                          <div className="flex items-center align-center">
-                            <div className="flex items-center justify-center bg-blue text-white font-medium h-6 w-6 rounded-full">
-                              3
-                            </div>
-
-                            <p className="ml-3 font-medium text-blue text-lg">
-                              Let it bloom
-                            </p>
-                          </div>
-                        </div>
-                        <div className="mt-3">
-                          <p className="ml-9 font-medium text-almoustBlack text-xs ">
-                            0m 45s - 1m 00s (15s)
-                          </p>
-                          <div className="flex items-center align-center">
-                            <div className="flex items-center justify-center bg-blue text-white font-medium h-6 w-6 rounded-full">
-                              3
-                            </div>
-
-                            <p className="ml-3 font-medium text-blue text-lg">
-                              Pour up to {Math.round(count * 3.3333333333) * 2}g
-                              total
-                            </p>
-                          </div>
-                        </div>
-                        <div className="mt-3">
-                          <p className="ml-9 font-medium text-almoustBlack text-xs ">
-                            1m 00s - 1m 10s (10s)
-                          </p>
-                          <div className="flex items-center align-center">
-                            <div className="flex items-center justify-center bg-blue text-white font-medium h-6 w-6 rounded-full">
-                              4
-                            </div>
-
-                            <p className="ml-3 font-medium text-blue text-lg">
-                              PAUSE
-                            </p>
-                          </div>
-                        </div>
-                        <div className="mt-3">
-                          <p className="ml-9 font-medium text-almoustBlack text-xs ">
-                            1m 10s - 1m 20s (10s)
-                          </p>
-                          <div className="flex items-center align-center">
-                            <div className="flex items-center justify-center bg-blue text-white font-medium h-6 w-6 rounded-full">
-                              5
-                            </div>
-
-                            <p className="ml-3 font-medium text-blue text-lg">
-                              Pour up to {Math.round(count * 3.3333333333) * 3}g
-                              total
-                            </p>
-                          </div>
-                        </div>
-                        <div className="mt-3">
-                          <p className="ml-9 font-medium text-almoustBlack text-xs ">
-                            1m 20s - 1m 30s (10s)
-                          </p>
-                          <div className="flex items-center align-center">
-                            <div className="flex items-center justify-center bg-blue text-white font-medium h-6 w-6 rounded-full">
-                              6
-                            </div>
-
-                            <p className="ml-3 font-medium text-blue text-lg">
-                              PAUSE
-                            </p>
-                          </div>
-                        </div>
-                        <div className="mt-3">
-                          <p className="ml-9 font-medium text-almoustBlack text-xs ">
-                            1m 30s - 1m 40s (10s)
-                          </p>
-                          <div className="flex items-center align-center">
-                            <div className="flex items-center justify-center bg-blue text-white font-medium h-6 w-6 rounded-full">
-                              7
-                            </div>
-
-                            <p className="ml-3 font-medium text-blue text-lg">
-                              Pour up to {Math.round(count * 3.3333333333) * 4}g
-                              total
-                            </p>
-                          </div>
-                        </div>
-                        <div className="mt-3">
-                          <p className="ml-9 font-medium text-almoustBlack text-xs ">
-                            1m 40s - 1m 50s (10s)
-                          </p>
-                          <div className="flex items-center align-center">
-                            <div className="flex items-center justify-center bg-blue text-white font-medium h-6 w-6 rounded-full">
-                              8
-                            </div>
-
-                            <p className="ml-3 font-medium text-blue text-lg">
-                              PAUSE
-                            </p>
-                          </div>
-                        </div>
-                        <div className="mt-3">
-                          <p className="ml-9 font-medium text-almoustBlack text-xs ">
-                            1m 50s - 2m 00s (10s)
-                          </p>
-                          <div className="flex items-center align-center">
-                            <div className="flex items-center justify-center bg-blue text-white font-medium h-6 w-6 rounded-full">
-                              9
-                            </div>
-
-                            <p className="ml-3 font-medium text-blue text-lg">
-                              Pour up to {Math.round(count * 3.3333333333) * 5}g
-                              total
+                              Boil {Math.round(count * waterRatio)}ml of water
                             </p>
                           </div>
                         </div>
                       </div>
+
+                      <div>
+                        <h3 className="text-base uppercase font-bold text-blue mt-10">
+                          COFFEE RECIPE
+                        </h3>
+                        <div className="flex flex-col mt-2 items-start align-center">
+                          <div className="mt-3">
+                            <p className="ml-9 font-medium text-almoustBlack text-xs">
+                              0m 00s - 0m 10s (10s)
+                            </p>
+                            <div className="flex items-center align-center">
+                              <div className="flex items-center justify-center bg-blue text-white font-medium h-6 w-6 rounded-full">
+                                1
+                              </div>
+                              <p className="ml-3 font-medium text-blue text-lg">
+                                Pour {Math.round(count * 3.3333333333)}g of
+                                water to bloom
+                              </p>
+                            </div>
+                          </div>
+                          <div className="mt-3">
+                            <p className="ml-9 font-medium text-almoustBlack text-xs ">
+                              0m 10s - 0m 15s (5s)
+                            </p>
+                            <div className="flex items-center align-center">
+                              <div className="flex items-center justify-center bg-blue text-white font-medium h-6 w-6 rounded-full">
+                                2
+                              </div>
+
+                              <p className="ml-3 font-medium text-blue text-lg">
+                                Gently Swirl
+                              </p>
+                            </div>
+                          </div>
+                          <div className="mt-3">
+                            <p className="ml-9 font-medium text-almoustBlack text-xs ">
+                              0m 15s - 0m 45s (30s)
+                            </p>
+                            <div className="flex items-center align-center">
+                              <div className="flex items-center justify-center bg-blue text-white font-medium h-6 w-6 rounded-full">
+                                3
+                              </div>
+
+                              <p className="ml-3 font-medium text-blue text-lg">
+                                Let it bloom
+                              </p>
+                            </div>
+                          </div>
+                          <div className="mt-3">
+                            <p className="ml-9 font-medium text-almoustBlack text-xs ">
+                              0m 45s - 1m 00s (15s)
+                            </p>
+                            <div className="flex items-center align-center">
+                              <div className="flex items-center justify-center bg-blue text-white font-medium h-6 w-6 rounded-full">
+                                3
+                              </div>
+
+                              <p className="ml-3 font-medium text-blue text-lg">
+                                Pour up to{' '}
+                                {Math.round(count * 3.3333333333) * 2}g total
+                              </p>
+                            </div>
+                          </div>
+                          <div className="mt-3">
+                            <p className="ml-9 font-medium text-almoustBlack text-xs ">
+                              1m 00s - 1m 10s (10s)
+                            </p>
+                            <div className="flex items-center align-center">
+                              <div className="flex items-center justify-center bg-blue text-white font-medium h-6 w-6 rounded-full">
+                                4
+                              </div>
+
+                              <p className="ml-3 font-medium text-blue text-lg">
+                                PAUSE
+                              </p>
+                            </div>
+                          </div>
+                          <div className="mt-3">
+                            <p className="ml-9 font-medium text-almoustBlack text-xs ">
+                              1m 10s - 1m 20s (10s)
+                            </p>
+                            <div className="flex items-center align-center">
+                              <div className="flex items-center justify-center bg-blue text-white font-medium h-6 w-6 rounded-full">
+                                5
+                              </div>
+
+                              <p className="ml-3 font-medium text-blue text-lg">
+                                Pour up to{' '}
+                                {Math.round(count * 3.3333333333) * 3}g total
+                              </p>
+                            </div>
+                          </div>
+                          <div className="mt-3">
+                            <p className="ml-9 font-medium text-almoustBlack text-xs ">
+                              1m 20s - 1m 30s (10s)
+                            </p>
+                            <div className="flex items-center align-center">
+                              <div className="flex items-center justify-center bg-blue text-white font-medium h-6 w-6 rounded-full">
+                                6
+                              </div>
+
+                              <p className="ml-3 font-medium text-blue text-lg">
+                                PAUSE
+                              </p>
+                            </div>
+                          </div>
+                          <div className="mt-3">
+                            <p className="ml-9 font-medium text-almoustBlack text-xs ">
+                              1m 30s - 1m 40s (10s)
+                            </p>
+                            <div className="flex items-center align-center">
+                              <div className="flex items-center justify-center bg-blue text-white font-medium h-6 w-6 rounded-full">
+                                7
+                              </div>
+
+                              <p className="ml-3 font-medium text-blue text-lg">
+                                Pour up to{' '}
+                                {Math.round(count * 3.3333333333) * 4}g total
+                              </p>
+                            </div>
+                          </div>
+                          <div className="mt-3">
+                            <p className="ml-9 font-medium text-almoustBlack text-xs ">
+                              1m 40s - 1m 50s (10s)
+                            </p>
+                            <div className="flex items-center align-center">
+                              <div className="flex items-center justify-center bg-blue text-white font-medium h-6 w-6 rounded-full">
+                                8
+                              </div>
+
+                              <p className="ml-3 font-medium text-blue text-lg">
+                                PAUSE
+                              </p>
+                            </div>
+                          </div>
+                          <div className="mt-3">
+                            <p className="ml-9 font-medium text-almoustBlack text-xs ">
+                              1m 50s - 2m 00s (10s)
+                            </p>
+                            <div className="flex items-center align-center">
+                              <div className="flex items-center justify-center bg-blue text-white font-medium h-6 w-6 rounded-full">
+                                9
+                              </div>
+
+                              <p className="ml-3 font-medium text-blue text-lg">
+                                Pour up to{' '}
+                                {Math.round(count * 3.3333333333) * 5}g total
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <p className="pt-6 pb-10 ml-9 font-bold text-xl text-blue">
+                        ENJOY YOUR COFFEE
+                      </p>
                     </div>
-                    <p className="pt-6 pb-10 ml-9 font-bold text-xl text-blue">
-                      ENJOY YOUR COFFEE
-                    </p>
                   </div>
                 </div>
               </div>
