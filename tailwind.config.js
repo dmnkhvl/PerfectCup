@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#514e90',
+        primary: '#1A1D6E',
         black: '#1F1F1F',
         lightGray: '#F0F4FA',
         gray: '#B6C4DB',
@@ -16,13 +16,13 @@ module.exports = {
         sans: ['SF Pro Display', 'sans-serif']
       },
       fontSize: {
-        lgTitle: '1.75rem',
+        lgTitle: '2rem',
+        mdTitle: '1.75rem',
         smTitle: '1.125rem',
-        h1: '1.125',
-        h2: '1rem',
-        h3: '0.938',
-        h4: '0.813',
-        base: '0.813rem'
+        big: '1.25rem',
+        base: '0.813rem',
+        small: '0.75rem',
+        xsmall: '0.625rem'
       }
     }
   },
