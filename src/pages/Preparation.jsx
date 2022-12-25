@@ -4,17 +4,15 @@ import grinder from '../assets/grinder.svg';
 import kettle from '../assets/kettle.svg';
 import Footer from '../components/Footer';
 import { Link } from 'react-router-dom';
+import { AiOutlineArrowLeft as BackArrow } from 'react-icons/ai';
 
 function Preparation() {
   return (
     <div className="bg-lightGray text-black text-base h-screen">
       <div className="mx-auto max-w-screen-sm">
         <div className="flex flex-col items-center">
-          <div className="flex flex-col h-[20vh] justify-center items-center">
+          <div className="flex h-[20vh] justify-center items-center">
             <h3 className="text-primary text-big"> Preparation</h3>
-            <Link to="/" className="px-3 py-1 rounded-xl bg-primary text-white">
-              Back
-            </Link>
           </div>
           <div className="flex flex-col justify-center h-[60vh]">
             <div className="flex justify-center gap-3">
@@ -41,7 +39,15 @@ function Preparation() {
               </a>
             </div>
           </div>
-          <Footer />
+          <div className="h-[20-vh] justify-center items-center">
+            <Link
+              to="/"
+              className="flex justify-center items-center mt-2 text-primary "
+            >
+              <BackArrow size={20} className="mr-1"></BackArrow>
+              <p className="mt-[2px] text-medium">Back</p>
+            </Link>
+          </div>
         </div>
       </div>
     </div>
