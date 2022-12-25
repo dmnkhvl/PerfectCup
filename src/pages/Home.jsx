@@ -1,6 +1,6 @@
 import React from 'react';
 import v60 from '../assets/v60.svg';
-import Test from '../components/Test';
+import Options from '../components/Options';
 
 export const Greeting = () => {
   var today = new Date();
@@ -31,7 +31,7 @@ function Home() {
           <img src={v60} className="w-14 mb-1 fill-primary " alt="v60icon" />
         </header>
         <section>
-          <Test></Test>
+          <Options />
         </section>
         <footer className="h-[20vh] flex justify-center items-center">
           <div className="flex flex-col items-center text-gray">
