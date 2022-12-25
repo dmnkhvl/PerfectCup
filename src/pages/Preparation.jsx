@@ -1,5 +1,7 @@
 import React from 'react';
 import v60 from '../assets/v60.svg';
+import grinder from '../assets/grinder.svg';
+import kettle from '../assets/kettle.svg';
 import Footer from '../components/Footer';
 
 function Preparation() {
@@ -13,13 +15,13 @@ function Preparation() {
           <div className="flex flex-col justify-center h-[60vh]">
             <div className="flex justify-center gap-3">
               <div className="flex flex-col justify-center bg-white h-40 w-32 rounded-2xl shadow-sm ">
-                <img src={v60} className=" h-14 " alt="" />
+                <img src={grinder} className=" h-14 fill-primary" alt="" />
                 <p className="text-black text-big text-center font-medium mt-2 px-4">
                   Grind 18g of coffee
                 </p>
               </div>
               <div className="flex flex-col justify-center bg-white h-40 w-32 rounded-2xl shadow-sm ">
-                <img src={v60} className=" h-14 " alt="" />
+                <img src={kettle} className=" h-14 " alt="" />
                 <p className="text-black text-big text-center font-medium mt-2 px-4">
                   Boil 300g of water
                 </p>
@@ -31,7 +33,7 @@ function Preparation() {
                 className="flex justify-center items-center mt-14 px-12 py-4 text-white text-big bg-primary rounded-3xl"
               >
                 Let's Brew
-                <img src={v60} className="h-7" alt="v60icon" />
+                <img src={v60} className="h-7 fill-white ml-3" alt="v60icon" />
               </a>
             </div>
           </div>

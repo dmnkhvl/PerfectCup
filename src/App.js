@@ -5,8 +5,8 @@ import Preparation from './pages/Preparation';
 function App() {
   return (
     <div className="App">
-      <Preparation></Preparation>
-      {/* <Home></Home> */}
+      {/* <Preparation></Preparation> */}
+      <Home></Home>
     </div>
   );
 }
