@@ -2,6 +2,7 @@ import React from 'react';
 import v60 from '../assets/v60.svg';
 import Options from '../components/Options';
 import Footer from '../components/Footer';
+import { Link } from 'react-router-dom';
 
 export const Greeting = () => {
   var today = new Date();
@@ -33,6 +34,7 @@ function Home() {
         </header>
         <section>
           <Options />
+          <Link to="/preparation">asdfd</Link>
         </section>
         <Footer />
       </div>
