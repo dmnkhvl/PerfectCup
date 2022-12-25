@@ -19,6 +19,7 @@ module.exports = {
         lgTitle: '2rem',
         mdTitle: '1.75rem',
         smTitle: '1.125rem',
+        extra: '1.5rem',
         big: '1.25rem',
         base: '0.813rem',
         small: '0.75rem',

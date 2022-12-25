@@ -1,0 +1,45 @@
+import React from 'react';
+import v60 from '../assets/v60.svg';
+import Footer from '../components/Footer';
+
+function Preparation() {
+  return (
+    <div className="bg-lightGray text-black text-base h-screen">
+      <div className="mx-auto max-w-screen-sm">
+        <div className="flex flex-col items-center">
+          <div className="flex h-[20vh] justify-center items-center">
+            <h3 className="text-primary text-big"> Preparation</h3>
+          </div>
+          <div className="flex flex-col justify-center h-[60vh]">
+            <div className="flex justify-center gap-3">
+              <div className="flex flex-col justify-center bg-white h-40 w-32 rounded-2xl shadow-sm ">
+                <img src={v60} className=" h-14 " alt="" />
+                <p className="text-black text-big text-center font-medium mt-2 px-4">
+                  Grind 18g of coffee
+                </p>
+              </div>
+              <div className="flex flex-col justify-center bg-white h-40 w-32 rounded-2xl shadow-sm ">
+                <img src={v60} className=" h-14 " alt="" />
+                <p className="text-black text-big text-center font-medium mt-2 px-4">
+                  Boil 300g of water
+                </p>
+              </div>
+            </div>
+            <div className="">
+              <a
+                href="https://nekocalc.com/px-to-rem-converter"
+                className="flex justify-center items-center mt-14 px-12 py-4 text-white text-big bg-primary rounded-3xl"
+              >
+                Let's Brew
+                <img src={v60} className="h-7" alt="v60icon" />
+              </a>
+            </div>
+          </div>
+          <Footer />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default Preparation;

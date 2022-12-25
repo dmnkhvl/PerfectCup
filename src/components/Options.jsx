@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
 
 export default function Options() {
+  const [skuska, setSkuska] = useState(0);
+
+  const handleSkuska = () => {
+    setSkuska();
+  };
+
   return (
     <main className="px-6 h-[60vh] flex flex-col justify-center">
       <p className="ml-3 text-smTitle font-normal">

@@ -1,6 +1,7 @@
 import React from 'react';
 import v60 from '../assets/v60.svg';
 import Options from '../components/Options';
+import Footer from '../components/Footer';
 
 export const Greeting = () => {
   var today = new Date();
@@ -33,26 +34,7 @@ function Home() {
         <section>
           <Options />
         </section>
-        <footer className="h-[20vh] flex justify-center items-center">
-          <div className="flex flex-col items-center text-gray">
-            <a
-              href="https://youtu.be/1oB1oDrDkHM"
-              target="_blank"
-              className="text-small"
-              rel="noreferrer"
-            >
-              James Hoffman V60 Technique
-            </a>
-            <a
-              href="https://dmnkhvl.eu/"
-              target="_blank"
-              className="text-xsmall"
-              rel="noreferrer"
-            >
-              Created by dmnkhvl
-            </a>
-          </div>
-        </footer>
+        <Footer />
       </div>
     </div>
   );
