@@ -1,11 +1,7 @@
 import React, { useState } from 'react';
 
 export default function Options() {
-  const [skuska, setSkuska] = useState(0);
-
-  const handleSkuska = () => {
-    setSkuska();
-  };
+  const [grams, setGrams] = useState(0);
 
   return (
     <main className="px-6 h-[60vh] flex flex-col justify-center">
@@ -14,9 +10,13 @@ export default function Options() {
       </p>
       <div>
         <input
+          onChange={(e) => {
+            setGrams(e.target.value);
+          }}
           type="radio"
           id={15}
           name="beans"
+          value={15}
           className="hidden peer"
         ></input>
         <label
@@ -29,9 +29,13 @@ export default function Options() {
       </div>
       <div>
         <input
+          onChange={(e) => {
+            setGrams(e.target.value);
+          }}
           type="radio"
           id={18}
           name="beans"
+          value={18}
           className="hidden peer"
         ></input>
         <label
@@ -44,9 +48,13 @@ export default function Options() {
       </div>
       <div>
         <input
+          onChange={(e) => {
+            setGrams(e.target.value);
+          }}
           type="radio"
           id={21}
           name="beans"
+          value={21}
           className="hidden peer"
         ></input>
         <label
@@ -57,6 +65,7 @@ export default function Options() {
           <p className="font-medium text-big ml-6 ">I really need one</p>
         </label>
       </div>
+      {console.log(grams)}
     </main>
   );
 }
