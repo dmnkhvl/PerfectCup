@@ -2,7 +2,7 @@
 
 Everybody loves coffee, well almost everybody. My favourite is drip coffee, especially V60. With a help of [James Hoffmann's tutorial](https://www.youtube.com/watch?v=1oB1oDrDkHM&t) I made this easy to follow guide.
 
-The app is tailor-made for smartphones and publicly available on [v60.kamodigital.eu](https://v60.kamodigital.eu/)
+The app is tailor-made for smartphones and publicly available on [v60.dmnkhvl.eu](http://v60.dmnkhvl.eu/)
 
 To build this app I used [React](https://reactjs.org/) with a [Tailwind CSS](https://tailwindcss.com/) which I have slightly customised.
 
